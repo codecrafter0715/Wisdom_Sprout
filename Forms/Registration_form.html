@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(238, 222, 202);
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 400px;
+            background-color: rgb(207, 189, 221);
+            padding: 20px;
+            font-size: large;
+            margin: 50px auto;
+            border: 3px solid rgb(138, 111, 111);
+            border-radius: 30px;
+        }
+
+        .formRow {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputWrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 16px;
+            padding: 5px 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .inputWrapper i {
+            color: #1d1452;
+            margin-right: 10px;
+            font-size: x-large;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px 8px;
+            font-size: medium;
+            border: none;
+            background-color: transparent;
+        }
+
+        input::placeholder {
+            color: #130c6f;
+            font-size: medium;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        input[type="register"] {
+            width: 80%;
+            padding: 12px;
+            margin-left: 30px;
+            font-weight: bold;
+            background-color: rgb(115, 78, 179);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="formRow">
+            <div class="inputWrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="Name" name="Name" placeholder="Enter your name">
+            </div>
+        </div>
+  
+        <div class="formRow">
+            <div class="inputWrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+        </div>
+   
+        <div class="formRow">
+            <div class="inputWrapper">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+        </div>
+       
+        <div class="formRow">
+            <div class="inputWrapper">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" name="phone" placeholder="Set Password">
+            </div>
+        </div>
+        
+        <div class="formRow">
+            <input type="register" value="REGISTER">
+        </div>
+    </form>
+</body>
+</html>
+

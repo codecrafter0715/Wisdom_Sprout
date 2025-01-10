@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form using Table</title>
+    <style>
+        form {
+            width: 900px;
+            height: 1000px;
+            background-image: linear-gradient(to top, #ff99cc, #00ccff);
+            border-width: 6px; 
+            border-style: dashed; 
+            border-color: black; 
+            padding: 10px;
+            font-size: x-large;
+            margin: auto;
+        }
+        
+        .formRow {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .labelCol {
+            width: 25%; 
+            text-align: left;
+            padding-left: 4%;
+            color: white;
+        }
+
+        .inputCol {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            gap: 30px; 
+        }
+
+        .maxLengthText {
+            font-size: small;
+            color: rgb(243, 240, 240);
+            white-space: nowrap; 
+        }
+
+        input {
+            width: 100%; 
+            padding: 8px;
+            font-size: medium;
+            background-color: white;
+            border: none;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px; 
+        }
+
+        label {
+            margin-left: 10px; 
+        }
+
+        input[type="email"], input[type="tel"], input[type="date"], input[type="text"] {
+            width: 60%; 
+        }
+
+        .buttonRow {
+            display: flex; 
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        input[type="submit"], input[type="clear"] {
+            width: 100px;   
+            padding: 12px;
+            font-weight: bold;
+            border: none;
+            color: black;
+            background-color: rgb(158, 156, 156);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="fName">First Name</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="fName" name="fName" maxlength="50" placeholder="Ghanendra">
+                <span class="maxLengthText">(Max 50 Characters Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="lName">Last Name</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="lName" name="lName" maxlength="50" placeholder="Yadav">
+                <span class="maxLengthText">(Max 50 Characters Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="email">Email ID</label>
+            </div>
+            <div class="inputCol">
+                <input type="email" id="email" name="email" maxlength="50" placeholder="yghanendra@gmail.com">
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="Mobile">Mobile Number</label>
+            </div>
+            <div class="inputCol">
+                <input type="tel" id="mobile" name="mobile" maxlength="10" placeholder="7842xxxxxx">
+                <span class="maxLengthText">(10 Digits Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="gender">Gender</label>
+            </div>
+            <div class="inputCol">
+                <input type="radio" value="male" name="gender" />
+                <label>Male</label>
+                <input type="radio" value="female" name="gender" />
+                <label>Female</label>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="dob">Date of Birth</label>
+            </div>
+            <div class="inputCol">
+                <input type="date" id="dob" name="dob">
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="address">Address</label>
+            </div>
+            <div class="inputCol">
+                <textarea id="address" name="address" rows="8" cols="55"></textarea>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="city">City</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="city" name="city" maxlength="50" placeholder="Bangalore">
+                <span class="maxLengthText">(Max 50 Characters Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="pincode">Pin Code</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="pincode" name="pincode" maxlength="6" placeholder="560068">
+                <span class="maxLengthText">(Max 6 Characters Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="state">State</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="state" name="state" maxlength="50" placeholder="Karnataka">
+                <span class="maxLengthText">(Max 50 Characters Allowed)</span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="labelCol">
+                <label for="country">Country</label>
+            </div>
+            <div class="inputCol">
+                <input type="text" id="country" name="country" placeholder="India">
+            </div>
+        </div>
+
+        <div class="buttonRow">
+            <input type="submit" value="Submit">
+            <input type="clear" value="Clear">
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+

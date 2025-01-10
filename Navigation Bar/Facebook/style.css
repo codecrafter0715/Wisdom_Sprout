@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center; 
+    box-shadow: 0px 2px 5px rgba(204, 202, 202, 0.5);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.navbar i {
+    font-size: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(220, 219, 219, 0.81);
+    justify-content: center;
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+}
+
+.icons {
+    margin-left: 560px;
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    margin-left: 60px;
+    font-size: 25px;
+    color: black; 
+    position: relative;
+}
+
+.icons .home {
+    color: blue;
+    border-bottom: 4px solid blue;
+    
+}
+
+.flag-container {
+    position: relative;
+    margin-left: 50px;
+}
+
+.flag-container .fa-flag {
+    font-size: 25px;
+}
+
+.flag-container .notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-container {
+    margin-left: 800px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon {
+    background-color: rgba(220, 219, 219, 0.81);
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.icon i {
+    position: fixed;
+    font-size: 20px;
+    color: black;
+    padding-right: 60px;
+}
+
+.icon .notification {
+    position: absolute;
+    top: -5px; 
+    right: -5px; 
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%; 
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+
+
+
