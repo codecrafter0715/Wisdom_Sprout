@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Moving</title>
+    <style>
+        .redbox {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(#6666ff, #ff99cc);
+            position: absolute; 
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
+            animation-name:moving;
+            animation-duration: 4s;
+            animation-delay: 1s;
+}
+
+        @keyframes moving{
+            0%{ background-image:linear-gradient(#000066,#ff99cc) ; left: 0px;top: 0px;}
+            25%{background-image:linear-gradient(#660033,#ff99cc) ; left: 200px;top: 0px;}
+            50%{background-image: linear-gradient(#ff0000,#ff99cc); left: 200px;top: 200px;}
+            75%{background-image: linear-gradient(#cc66ff,#ff99cc); left: 0px;top: 200px;}
+            100%{background-image: linear-gradient(#006666,#ff99cc); left: 0px;top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="redbox"></div>
+</body>
+</html>

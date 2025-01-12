@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloud moving or blinking stars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #001848, #1a3c7f);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stars {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        
+        .star {
+            position: absolute;
+            color: white;
+            font-size: 15px;
+            filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff);
+            animation: blink 2s infinite, glitter 1s infinite;
+        }
+
+        
+        .cloud {
+            position: absolute;
+            color: white;
+            font-size: 100px;
+            animation: moveCloud 10s linear infinite;
+        }
+
+       
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes moveCloud {
+            0% { transform: translateX(-200px); }
+            100% { transform: translateX(100vw); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="stars">
+       
+        <i class="fa-solid fa-star star" style="top: 5%; left: 10%; animation-duration: 2s;"></i>
+        <i class="fa-solid fa-star star" style="top: 15%; left: 25%; animation-duration: 3s;"></i>
+        <i class="fa-solid fa-star star" style="top: 10%; left: 40%; animation-duration: 1.5s;"></i>
+        <i class="fa-solid fa-star star" style="top: 20%; left: 60%; animation-duration: 2.5s;"></i>
+        <i class="fa-solid fa-star star" style="top: 5%; left: 80%; animation-duration: 3.5s;"></i>
+
+        <i class="fa-solid fa-star star" style="top: 25%; left: 15%; animation-duration: 4s;"></i>
+        <i class="fa-solid fa-star star" style="top: 30%; left: 35%; animation-duration: 2s;"></i>
+        <i class="fa-solid fa-star star" style="top: 40%; left: 50%; animation-duration: 3.5s;"></i>
+        <i class="fa-solid fa-star star" style="top: 35%; left: 75%; animation-duration: 1.8s;"></i>
+        <i class="fa-solid fa-star star" style="top: 45%; left: 90%; animation-duration: 4.2s;"></i>
+
+        
+        
+        <i class="fa-solid fa-cloud cloud" style="top: 20%; left: -200px; animation-duration: 10s;"></i>
+        <i class="fa-solid fa-cloud cloud" style="top: 30%; left: -250px; animation-duration: 12s;"></i>
+        <i class="fa-solid fa-cloud cloud" style="top: 40%; left: -300px; animation-duration: 15s;"></i>
+    </div>
+</body>
+</html>
