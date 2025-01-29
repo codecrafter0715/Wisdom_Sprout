@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Even and Odd Numbers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 500px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    h3 {
+      text-align: center;
+      color: #333;
+    }
+    input[type="number"] {
+      width: 80%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #2196F3;
+      color: white;
+    }
+    .output {
+      margin-top: 20px;
+      background: #f4f4f9;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .output div {
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 95%;
+      height: 60px;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Filter Even and Odd Numbers</h3>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button class="add" onclick="addNumber()">Add Number</button>
+    <button class="showEven" onclick="showEven()">Show Even</button>
+    <button class="showOdd" onclick="showOdd()">Show Odd</button>
+    <button class="clear" onclick="clearArrays()">Clear</button>
+    <div class="output">
+      <div>
+        <h4>Even Numbers</h4>
+        <textarea id="evenOutput" placeholder="Even Numbers will appear here..."></textarea>
+      </div>
+      <div>
+        <h4>Odd Numbers</h4>
+        <textarea id="oddOutput" placeholder="Odd Numbers will appear here..."></textarea>
+      </div>
+    </div>
+  </div>
+  <script>
+    let numbers = [];
+    let evenNumbers = [];
+    let oddNumbers = [];
+    function addNumber() {
+      const number = parseInt(document.getElementById('numberInput').value);
+      if (!isNaN(number)) {
+        numbers.push(number);
+        document.getElementById('numberInput').value = ''; 
+      }
+    }
+    function showEven() {
+      evenNumbers = numbers.filter(num => num % 2 === 0);
+      document.getElementById('evenOutput').value = evenNumbers.join(', ');
+    }
+    function showOdd() {
+      oddNumbers = numbers.filter(num => num % 2 !== 0);
+      document.getElementById('oddOutput').value = oddNumbers.join(', ');
+    }
+    function clearArrays() {
+      numbers = [];
+      evenNumbers = [];
+      oddNumbers = [];
+      document.getElementById('evenOutput').value = '';
+      document.getElementById('oddOutput').value = '';
+    }
+  </script>
+</body>
+</html>
