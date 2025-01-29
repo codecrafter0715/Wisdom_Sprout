@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+</head>
+<body>
+    <script>
+        //BIM Calculator
+        let weight=parseFloat(prompt("Enter weight:"));
+        let height=parseFloat(prompt("Enter height:"));
+        let bmi= weight/(height*height);
+        console.log("BMI",bmi);
+        if(bmi< 18.5)
+        {
+            console.log("Category:Underweight");
+        }
+            else if(bmi>=18.5 && bmi<24.9)
+            {
+                console.log("Category:Normal wight");
+            }
+            else if(bmi>=25 && bmi<29.9)
+            {
+                console.log("Category:Overweight"); 
+            }
+            else
+            {
+                console.log("Category:Obesity"); 
+            }
+    </script>
+</body>
+</html>
