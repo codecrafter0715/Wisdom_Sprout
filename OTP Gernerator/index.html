@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            height: 50vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(67, 97, 41);
+        }
+        .container {
+            background: #fff;
+            padding: 30px 50px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .input-field {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        form input {
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        button { 
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            display: block; 
+            margin: auto;
+        }
+        h3 {
+            margin-top: 12px;
+
+        }
+        #otp-display {
+            font-size: 20px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>OTP Verification</h4>
+        <button id="get-otp" onclick="generateOTP()">Get OTP</button>
+        <div id="otp-display"></div> 
+        <h3>Please enter the OTP sent to your mobile</h3>
+        <form id="otp-form">
+            <div class="input-field">
+                <input type="number" maxlength="1" oninput="moveToNext(this, 0)" required>
+                <input type="number" maxlength="1" oninput="moveToNext(this, 1)" required>
+                <input type="number" maxlength="1" oninput="moveToNext(this, 2)" required>
+                <input type="number" maxlength="1" oninput="moveToNext(this, 3)" required>
+            </div>
+            <button type="submit" style="margin-top: 13px;">Submit</button>
+        </form>
+    </div>
+    <script>
+        let generatedOTP = ""; 
+
+        function generateOTP() {
+            generatedOTP = Math.floor(1000 + Math.random() * 9000).toString(); 
+            document.getElementById("otp-display").innerText = "Your OTP: " + generatedOTP;
+        }
+
+        function moveToNext(input, index) {
+            let inputs = document.querySelectorAll(".input-field input");
+            if (input.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus(); 
+            }
+        }
+
+        document.getElementById("otp-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let userOTP = "";
+            let inputs = document.querySelectorAll(".input-field input");
+
+            inputs.forEach(input => {
+                userOTP += input.value;
+            });
+
+            if (userOTP === generatedOTP) {
+                window.location.href = "home.html"; 
+            } else {
+                alert("Invalid OTP! Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
